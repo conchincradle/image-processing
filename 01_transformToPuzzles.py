@@ -18,8 +18,9 @@ final = img[0]
 for i in range(1,n):
   final = np.concatenate((final,img[i]),axis=0)
 cv2_imshow(final)
+# SEE puzzle_4.jpg
 
-print(final.shape)
+
 cv2.imwrite("final.jpg",final)
 # final.jpg renamed to puzzle_128.jpg
 # below is to do image blending of the concatenated lines
@@ -39,3 +40,5 @@ for i in range(1,n):
     img[:,mid-3+i] = (1-0.2*i)*a+0.2*i*b
 
 cv2.imwrite("128.jpg",img)
+
+# SEE blending_puzzle_4.jpg
